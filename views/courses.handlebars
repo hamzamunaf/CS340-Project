@@ -1,0 +1,62 @@
+<table class="container">
+	<div id="search-div">
+		<form method="get" id="addCourseForm">
+			<fieldset>
+				<legend>Search</legend>
+				<legend>Course info:</legend>
+				<p>
+					<label for="Code">Code: </label>
+					<input type="text" class="required" name="code" id="pname">
+				</p>
+				<p>
+					<label for="Name">Name:</label>
+					<input type="text" class="required" name="name" id="pname">
+				</p>
+				<p>
+					<label for="Topic">Topic:</label>
+					<select name="topic">
+						<option value="-1">None</option>
+						{{#each topics}}
+						<option value="{{this.ID}}"> {{this.Name}}</option>
+						{{/each}}
+					</select>
+				</p>
+				<p>
+					<label for="OfferedBy">Offered by university:</label>
+					<select name="offeredby">
+						<option value="-1">None</option>
+						{{#each universities}}
+						<option value="{{this.ID}}"> {{this.Name}}</option>
+						{{/each}}
+					</select>
+				</p>
+				<p class="submitButtons">
+					<input type="submit" value="Submit" />
+					<input type="reset" value="Clear Form" />
+				</p>
+			</fieldset>
+		</form>
+	</div>
+	<thead>
+		<tr>
+			<th>
+				<h1>Course Code</h1>
+			</th>
+			<th>
+				<h1>Title</h1>
+			</th>
+			<th>
+				<h1>Description</h1>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each courses}}
+		<tr>
+			<td><a href="/course?id={{this.ID}}">{{this.Code}}</a></td>
+			<td><a href="/course?id={{this.ID}}">{{this.cName}}</a></td>
+			<td>{{this.Description}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

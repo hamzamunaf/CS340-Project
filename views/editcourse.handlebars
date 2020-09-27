@@ -1,0 +1,67 @@
+<form method="POST" id="addCourseForm" action="addCourse">
+	<fieldset>
+		<legend>Add Course</legend>
+		<legend>Course info:</legend>
+		<p>
+			<label for="sID">Code: </label>
+			<input type="text" class="required" name="code" id="code" oninvalid="alert('Must contain 4 or more characters for Course code');"  pattern=".{4,}">
+		</p>
+		<p>
+			<label for="Name">Name:</label>
+			<input type="text" class="required" name="name" id="name" oninvalid="alert('Must contain 10 or more characters for Course Name');"  pattern=".{10,}">
+		</p>
+		<p>
+			<label for="Description">Description:</label>
+			<input type="text" class="required" name="description" id="description" oninvalid="alert('Must contain 15 or more characters for Course Description');"  pattern=".{15,}">
+		</p>
+		<p>
+			<label id="offeredBy" name="offeredBy" for="offeredBy">Offered by university:</label>
+			<select name="offeredBy" id="offeredBy">
+				{{#each universities}}
+				<option value="{{this.ID}}"> {{this.Name}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" onclick="alert('Course was succesfully added')"/>
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+</form>
+
+<form method="post" id="removeCourseForm" action="removecourse">
+	<fieldset>
+		<legend>Remove Course</legend>
+		<p>
+			<label for="Course">Choose course to remove:</label>
+			<select name="id" id="id">
+				{{#each courses}}
+				<option value="{{this.ID}}"> {{this.Code}}: {{this.Name}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+</form>
+
+<form method="get" id="editCourseForm" action="updateCourse">
+	<fieldset>
+		<legend>Edit Course</legend>
+		<p>
+			<label for="id" id="id" name="id">Choose course to edit:</label>
+			<select id="id" name="id">
+				{{#each courses}}
+				<option value="{{this.ID}}"> {{this.Code}}: {{this.Name}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+
+</form>

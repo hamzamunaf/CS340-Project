@@ -1,0 +1,19 @@
+<div id="course-wrapper">
+        <p id="course-header">{{this.instructorinfo.Name}}, {{this.instructorinfo.Degree}}</p>
+        <p id="course-university">at {{this.universities.UName}}</p>
+</div>
+<table class="container">
+    <p id="table-header">Courses {{this.instructorinfo.Name}} is teaching:</p>
+	<thead>
+		<tr>
+			<th><h1>Courses</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each courses}}
+		<tr>
+				<td><a href="/course?id={{this.ID}}">{{this.Code}}: {{this.Name}}</a></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

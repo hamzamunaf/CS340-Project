@@ -1,0 +1,18 @@
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Name</h1></th>
+			<th><h1>Degree</h1></th>
+			<!-- <th><h1>University</h1></th>  --> 
+			<!-- need to setup inner join to get the university name -->
+		</tr>
+	</thead>
+	<tbody>
+		{{#each data}}
+		<tr>
+                <td><a href="/instructor?id={{this.ID}}">{{this.Name}}</a></td>
+                <td>{{this.Degree}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

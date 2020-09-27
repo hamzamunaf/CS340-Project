@@ -1,0 +1,45 @@
+<form method="post" id="addUniversityForm" action="addUniversity">
+	<fieldset>
+		<legend>Add University</legend>
+		<legend>University info:</legend>
+		<p>
+			<label for="name">Name: </label>
+			<input type="text" class="required" name="name" id="name" oninvalid="alert('Must contain 6 or more characters for University Name');"  pattern=".{6,}" required
+       minlength="6" maxlength="30">
+		</p>
+		<p>
+			<label for="Country">Country: </label>
+			<input type="text" class="required" name="country" id="country" oninvalid="alert('Must contain 2 or more characters for Country Field');"  pattern=".{2,}" required
+       minlength="2" maxlength="10">
+		</p>
+		<p>
+			<label for="Region">Region: </label>
+			<input type="text" class="required" name="region" id="region" oninvalid="alert('Must contain 3 or more characters for Region Field');"  pattern=".{6,}" required
+       minlength="3" maxlength="30">
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" onclick="alert('University was succesfully added')"/>
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+</form>
+
+
+<!-- <form method="post" id="editUniversityForm">
+	<fieldset>
+		<legend>Edit University</legend>
+		<p>
+			<label for="Color">Choose University  to edit:</label>
+			<select>
+				{{#each universities}}
+				<option value="{{this.ID}}"> {{this.Name}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+
+</form> -->

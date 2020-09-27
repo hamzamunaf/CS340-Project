@@ -1,0 +1,29 @@
+{
+  "name": "cs340_database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dbcon.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "forever": "^2.0.0",
+    "handlebars": "^4.7.6",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzamunaf/CS340_Database.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzamunaf/CS340_Database/issues"
+  },
+  "homepage": "https://github.com/hamzamunaf/CS340_Database#readme"
+}

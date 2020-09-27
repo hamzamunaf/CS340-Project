@@ -1,0 +1,42 @@
+<div id="course-wrapper">
+    <p id="course-header">{{this.courseinfo.Code}} - {{this.courseinfo.CName}}</p>
+    <p id="course-university">at {{this.courseinfo.UName}}</p>
+    <p id="course-description">Description: {{this.courseinfo.Description}}</p>
+</div>
+<table class="container">
+    <p id="table-header">Available videos:</p>
+	<thead>
+		<tr>
+			<th><h1>Video</h1></th>
+			<th><h1>Length</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each videos}}
+		<tr>
+				<td><a href="{{this.URL}}">{{this.Title}}</a></td>
+                <td>{{this.Length}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<table class="container">
+    <p id="table-header">Top 5 related courses:</p>
+	<thead>
+		<tr>
+			<th><h1>Topic</h1></th>
+			<th><h1>Course Title</h1></th>
+			<th><h1>Course Code</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each relatedcourses}}
+		<tr>
+				<td>{{this.TName}}</td>
+                <td>{{this.CName}}</td>
+                <td>{{this.Code}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+<div class="standalone-link"><a href="/relatedcourses?id={{this.courseinfo.CID}}">View all related courses</a></div>

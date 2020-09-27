@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS</title>
+</head>
+<body>
+    <div id="main">
+        <h2>Open CS Courses</h2>
+        <h3>Group 1</h3>
+        <div id="table-wrapper">
+            <table id="the-table">
+            <tr>
+                <th>
+                    Links
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/">Home page</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/courses">Course search page (SELECT)</a>
+                    View all courses and search through them.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/universities">View universities page (SELECT)</a>
+                    View all universities.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/instructor?id=1">View instructor page (SELECT)</a>
+                    View information associated with an instructor.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/course?id=1">View course info page (SELECT)</a>
+                    View information associated with a course.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/relatedcourses?id=1">View related courses page (SELECT)</a>
+                    View all courses related to a course
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/editcourse">Add/drop/update courses page (CREATE/UPDATE/DELETE)</a>
+                    Add, edit, or remove courses.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/editinstructor">Add/drop/update instructor page (CREATE/UPDATE/DELETE)</a>
+                    Add, edit, or remove instructors.
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table {
+  border-spacing: 5px;
+}
+body {
+    text-align: center;
+}
+#table-wrapper{
+    display: inline-block;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main {
+    margin: 20vh 0px 0px 0px;
+}
+</style>

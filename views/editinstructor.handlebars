@@ -1,0 +1,63 @@
+<form method="post" id="addInstructorForm" action="addInstructor">
+	<fieldset>
+		<legend>Add Instructor</legend>
+		<legend>Instructor info:</legend>
+		<p>
+			<label for="name">Name: </label>
+			<input type="text" class="required" name="name" id="name" oninvalid="alert('Must contain 6 or more characters for Name');"  pattern=".{6,}">
+		</p>
+		<p>
+			<label for="degree">Degree:</label>
+			<input type="text" class="required" name="degree" id="dgree" oninvalid="alert('Must contain 5 or more characters for Degree');"  pattern=".{5,}">
+		</p>
+		<p>
+			<label for="university">Associated with university:</label>
+			<select name="university" id="university">
+				{{#each universities}}
+				<option value="{{this.ID}}"> {{this.Name}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" onclick="alert('Insturctor was succesfully added')"/>
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+</form>
+
+<form method="post" id="removeInstructorForm" action="removeInstructor">
+	<fieldset>
+		<legend>Remove Instructor</legend>
+		<p>
+			<label for="Color">Choose Instructor to remove:</label>
+			<select name="id" id="id">
+				{{#each instructors}}
+				<option value="{{this.ID}}"> {{this.Name}}, {{this.Degree}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" onclick="alert('Insturctor was succesfully removed')" />
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+</form>
+
+<form method="get" id="editInstructorForm" action="updateinstructor">
+	<fieldset>
+		<legend>Edit Instructor</legend>
+		<p>
+			<label for="Color">Choose Instructor to edit:</label>
+			<select name="id" id="id">
+				{{#each instructors}}
+				<option value="{{this.ID}}"> {{this.Name}}, {{this.Degree}}</option>
+				{{/each}}
+			</select>
+		</p>
+		<p class="submitButtons">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Clear Form" />
+		</p>
+	</fieldset>
+
+</form>
